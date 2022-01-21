@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Medicine Online | India's</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/6fa3bd69d6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="nav1"> <p class="text">Free shipping over $89,or shop online and pick up select order at a Nordstrom Rack or Nordstrom
+        store.Learn More</p></div>
+    <nav>
+        <img class="rock" src="rack.png" alt="">
+        <div id="iconic">
+        <a class="icon1" href="#"><i class="fas fa-search"></i>Search</a>
+         <a class="icon" href="login.html">Sign in<i class="fa fa-angle-down"></i></a>
+         <a  class="icon"href="#"><i class="fas fa-shopping-bag"></i></a>
+                
+        </div>
+    <header class="header">
+    </nav>
+    <nav id="nav2">
+        <a id="clear" href="">Clearence</a>
+        <a href="">Women</a>
+        <a href="">Men <i class="fa fa-angle-down"></i></a>
+        <a href="">Kids</a>
+        <a href="">Shoes</a>
+        <a href="">Bag&Accesories</a>
+        <a href="">Home</a>
+        <a href="">Beauty</a>
+        <a href="">Gifts</a>
+        <a id="event" href="">Flash Events</a>
+    </nav>
+
+    <div id="cart">
+        <h2 class="center">My cart: items<h2>
+    
+      </div>
+    <div id="left-arrow"><img height="10%" width="2%" alt=""><button onclick="window.location.href = 'navbar.html' " class="arrow"><i class="fas fa-arrow-left"></i>Go to
+            previous page</button></div>
+
+
+
+    <div id="cart">
+        <h2 class="center">My cart: <cart:p id="cartLen"></cart:p> items<h2>
+                <div id="cartItm"></div>
+                <button class="addItm" onclick="window.location.href='navbar.html'">Add More Iteams</button>
+
+    </div>
+
+    <div class="bottom-container">
+        <h4 id="total">Payable Amount: 0</h4>
+        <button class="bottom-btn" onclick="next()">Checkout</button>
+    </div>
+</body>
+
+</html>
+<script>
+var count = 1
+var data = [
+  {
+    name: "High Rise 7/8 Daily Pocket Leggings",
+    image:
+      "jeans2.jpeg",
+    price: "$114.71",
+    description: "BareFoot Dreams",
+    qty: 1,
+  },
+  {
+    name: "High Rise 7/8 Daily Pocket Leggings",
+    image:
+      "jeans3.jpeg",
+    price: "$234",
+    description: "BareFoot Dreams",
+    qty: 2,
+  },
+  {
+    name: "High Rise 7/8 Daily Pocket Leggings",
+    image:
+      "jeans4.jpeg",
+    price: "₹$44",
+    description: "Barefoot Dreams",
+    qty: 1,
+  },
+  {
+    name: "High Rise 7/8 Daily Pocket Leggings",
+    image:
+      "jeans5.jpeg",
+    price: "$99.97",
+    description: "BareFoot Dreams",
+    qty: 1,
+  },
+];
+
+display_product(data);
+
+function display_product(data) {
+  data.map(function (elem) {
+    // creating elements and setting attributes
+
+    // main container
+    var mainDiv = document.createElement("div");
+    mainDiv.setAttribute("class", "flex");
+
+    // for product image
+    var smallDiv = document.createElement("div");
+    smallDiv.setAttribute("class", "flex1");
+    var img = document.createElement("img");
+    img.setAttribute("src", elem.image);
+
+    // for product description and name
+    var details = document.createElement("div");
+    var h2 = document.createElement("h2");
+    var p = document.createElement("p");
+
+    // for product price and quantity
+    var pricing = document.createElement("div");
+    var h3 = document.createElement("h3");
+    var p1 = document.createElement("p");
+
+    // quantity div
+    var quantityMain = document.createElement("div");
+    quantityMain.setAttribute("class", "grid")
+    var dec = document.createElement("div");
+    dec.setAttribute("class", "border");
+    dec.addEventListener('click', decCount)
+    var quantity = document.createElement("div");
+    quantity.setAttribute("class", "qty");
+    var inc = document.createElement("div");
+    inc.setAttribute("class", "border");
+    inc.addEventListener('click', incCount)
+
+
+    // giving content to the elements from the arr
+    h2.textContent = elem.name;
+    h3.textContent = elem.price;
+    p.textContent = elem.description;
+    p1.textContent = elem.qty;
+    dec.innerHTML = "-";
+    inc.innerHTML = "+";
+    quantity.innerHTML = count
+
+
+    // appending the child elements with the parent elements
+    details.append(h2, p);
+    smallDiv.append(img, details);
+
+    // quantity
+    quantityMain.append(dec, quantity, inc)
+
+
+    pricing.append(h3, quantityMain);
+    mainDiv.append(smallDiv, pricing);
+    // mainDiv.style.height = "70%"
+    document.querySelector("#cart").append(mainDiv);
+  });
+
+
+  // function for decreasing the quantity of a particular item
+  function decCount(event) {
+    event.preventDefault();
+    let target = event.target.parentNode.children[1]
+    let res = target.innerHTML
+    res = +res - 1
+
+    target.innerHTML = res;
+
+  }
+
+
+  // function for increasing the quantity of a particular item
+
+  function incCount(event) {
+    event.preventDefault();
+    let target = event.target.parentNode.children[1]
+    let res = target.innerHTML
+    res = +res + 1
+
+    target.innerHTML = res;
+  }
+
+}
+</script>
+
+<script src="cart.js"></script>

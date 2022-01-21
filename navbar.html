@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/6fa3bd69d6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="slider.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav1 {
+            display: grid;
+            background-color: #00819d;
+            height: 40px;
+            text-align: center;
+            color: white;
+            font-family: Camphor, Helvetica, Arial, sans-serif;
+        }
+
+        #iconic {
+            float: right;
+            margin-top: 10px;
+
+
+        }
+
+        .icon {
+            justify-content: space-between;
+            font-size: 25px;
+            padding: 12px 12px;
+
+        }
+
+        .icon1 {
+            font-size: 10x;
+            font-weight: lighter;
+
+        }
+
+        .text {
+            margin-top: 10px;
+            font-family: Camphor, Helvetica, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        #logo1 {
+            height: 6%;
+            width: 8%;
+            margin-top: 10px;
+            padding: 10px 10px;
+
+
+        }
+
+        #logo2 {
+            margin-left: 70%;
+            margin-bottom: 10px;
+            height: 1%;
+            width: 2%;
+        }
+
+        #search {
+            outline: none;
+            justify-content: space-between;
+        }
+
+        #nav2 {
+            display: flex;
+            justify-content: space-between;
+
+
+
+        }
+
+        #clear {
+            color: red;
+            text-decoration: none;
+            padding-left: 24px;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: 'Dongle', sans-serif;
+            font-size: 25px;
+        }
+
+        #event {
+            color: #08a;
+            padding-right: 19px;
+        }
+
+        #text1 {
+            text-align: center;
+            font-size: 50px;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        .btn {
+            text-align: center;
+
+        }
+
+        #btn1 {
+            height: 40px;
+            width: 300px;
+            border: 2px solid #08a;
+            background-color: #fff;
+            color: #08a;
+            font-family: 'Dongle', sans-serif;
+            font-size: 30px;
+        }
+
+        #btn1:hover {
+            background-color: #08a;
+            color: #fff;
+        }
+
+        #discount {
+            margin-top: 80px;
+            padding: 30px 30px;
+        }
+
+        /* slider */
+        .slide-container {
+            position: relative;
+            width: 100%;
+
+        }
+
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            color: black;
+            padding: 8px 19px;
+            font-size: 40px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .collect1 {
+            font-family: 'Dongle', sans-serif;
+            font-size: 50px;
+
+        }
+
+        .collect {
+            font-family: 'Dongle', sans-serif;
+            font-size: 30px;
+        }
+
+        #tag {
+            justify-content: space-between;
+            color: #08a;
+            padding: 10px 10px;
+            text-decoration: underline;
+        }
+
+        /* new style */
+        #new {
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 30px;
+        }
+
+        /* container3 */
+        #container3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 99%;
+            height: 600px;
+            border: 2px solid transparent;
+            grid-gap: 50px;
+        }
+
+        #container3>div {
+            height: 100%;
+            width: 100%;
+            border: 2px solid transparent;
+
+        }
+
+        #modern {
+            font-family: 'Dongle', sans-serif;
+            font-size: 30px;
+        }
+
+        .text4 {
+            font-family: 'Dongle', sans-serif;
+            font-size: 25px;
+        }
+
+        .tag1 {
+            color: #08a;
+            padding: 20px 20px;
+            text-decoration: underline;
+        }
+
+        #heading {
+            font-family: 'Dongle', sans-serif;
+            font-size: 35px;
+            margin-top: 40px;
+            padding-left: 20px;
+        }
+
+        /* categories */
+        #women-section {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            width: 100%;
+            height: 500px;
+            border: 2px solid transparent;
+        }
+
+        #women-section>div {
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .round {
+            text-align: center;
+            justify-content: space-evenly;
+        }
+
+        .product-brands {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .product-short-description {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        .price {
+            text-align: center;
+            padding: 10px 10px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .actual-price {
+            padding-left: 20px;
+        }
+
+        /* events */
+
+        .Events {
+            margin-top: 20px;
+        }
+
+        /* next section */
+        #more {
+            text-align: center;
+            margin-top: 60px;
+            font-family: sans-serif;
+        }
+
+        #container7 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+            width: 100%;
+            height: 300px;
+            border: 2px solid transparent;
+        }
+
+        #container7>div {
+            height: 100%;
+            width: 100%;
+            border: 2px solid transparent;
+        }
+
+        #rack {
+            color: #08a;
+        }
+
+        .rack1 {
+            color: #08a;
+            justify-content: space-between;
+        }
+
+        .playstore {
+            font-family: 'Dongle', sans-serif;
+            font-size: 15px;
+        }
+
+        .stored {
+            font-family: 'Dongle', sans-serif;
+            font-size: 12px;
+        }
+
+
+        /* another container */
+        #headings {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        /* container6 */
+        #container6 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 100%;
+            height: 600px;
+            border: 2px solid transparent;
+        }
+
+        #container6>div {
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .note {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        .nutrition {
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        #line {
+            color: #08a;
+            font-family: 'Dongle', sans-serif;
+            font-size: 13px;
+
+        }
+
+        /* section */
+        .best {
+            justify-content: center;
+            text-align: center;
+            font-size: 25px;
+            margin-top: 50px;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        #container8 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            width: 100%;
+            height: 300px;
+            border: 2px solid transparent;
+        }
+
+        #container8>div {
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .card-btn1 {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 10px;
+            width: 90%;
+            text-transform: capitalize;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: 0.5s;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        .card-btn1:hover {
+            background: teal;
+            color: #fff;
+        }
+
+        /* section2 */
+        .view {
+            font-family: 'Dongle', sans-serif;
+            margin-left: 10px;
+
+        }
+
+        #container9 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 60%;
+            height: 450px;
+            border: 2px solid transparent;
+        }
+
+        #container9>div {
+            height: 100%;
+            width: 100%;
+            border: 2px solid transparent;
+        }
+
+        .brand {
+            font-size: 15px;
+            text-align: center;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        /* footer - section */
+        #footer {
+            background-color: #f9f9f9;
+            line-height: 40px;
+
+        }
+
+        .container10 {
+            max-width: 100%;
+            height: 100%;
+            margin: auto;
+            text-align: center;
+
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer-col>h4 {
+            font-size: 25px;
+            font-family: 'Dongle', sans-serif;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .footer-col>ul>li>a {
+            font-size: 18px;
+            text-decoration: none;
+            color: grey;
+            font-family: 'Dongle', sans-serif;
+            text-transform: capitalize;
+            display: bloack;
+            transition: all 0.3s ease;
+
+        }
+
+        .footer-col>ul>li>a:hover {
+            color: teal;
+            padding-right: 20px;
+        }
+
+        .footer-col .socail-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: grey;
+            margin-right: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 60%;
+            color: #ffffff;
+
+        }
+
+        #container11>ul {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        #container11>ul>li>a {
+            text-decoration: none;
+            color: grey;
+            text-align: center;
+            font-size: 18px;
+            font-family: 'Dongle', sans-serif;
+        }
+
+        #women-order {
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: cornflowerblue;
+            color: white;
+            padding: 10px 10px;
+            justify-content: center;
+            margin-left: 50px;
+        }
+
+        #women-order:hover>a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav1">
+        <p class="text">Free shipping over $89,or shop online and pick up select order at a Nordstrom Rack or Nordstrom
+            store.Learn More</p>
+    </div>
+    <nav>
+        <img id="logo1" src="rack.png" alt="">
+        <div id="iconic">
+            <a class="icon1" href="#"><i class="fas fa-search"></i>Search</a>
+            <a class="icon" href="login.html">Sign in<i class="fa fa-angle-down"></i></a>
+            <a class="icon" href="#"><i class="fas fa-shopping-bag"></i></a>
+
+        </div>
+        <header class="header">
+    </nav>
+    <nav id="nav2">
+        <a id="clear" href="">Clearence</a>
+        <a href="">Women</a>
+        <a href="">Men</a>
+        <a href="">Kids</a>
+        <a href="">Shoes</a>
+        <a href="">Bag&Accesories</a>
+        <a href="">Home</a>
+        <a href="">Beauty</a>
+        <a href="">Gifts</a>
+        <a id="event" href="">Flash Events</a>
+    </nav>
+    </header>
+    <h1 id="text1">Convenient. Easy. More for you.</h1>
+    <div class="btn"><button id="btn1"><a href="signup.html">Sign In Create an Account</a></button></div>
+    <div id="discount"><img height="50%" width="100%" src="navigation.jpeg" alt=""></div>
+
+    <!-- slider -->
+
+    <div class="slide-container">
+
+        <div class="slide">
+            <img class="img1" height="100%" width="100%" src="$12.jpeg" alt="">
+
+        </div>
+        <div class="slide">
+            <img class="img1" height="100%" width="100%" src="blank2.jpeg" alt="">
+        </div>
+
+        <div class="slide">
+            <img class="img1" height="100%" width="100%" src="style2.jpeg" alt="">
+
+        </div>
+        <div class="slide">
+            <img class="img1" height="100%" width="100%" src="valentine.jpeg" alt="">
+
+        </div>
+
+        <h2 class="collect1">Are You Trendy, Romantic or Classic?</h2>
+        <p class="collect">Find trendy styles from Elodie, Steve Madden & more; romantic looks from T Tahari, MAX STUDIO
+            & more; and classics from Rag & Bone, FRAME & more.</p>
+        <a id="tag" href="">Trendy</a>
+        <a id="tag" href="">Romantic</a>
+        <a id="tag" href="">Classic</a>
+
+        <span class="arrow prev" onclick="controllar(-1)">&#10094;</span>
+        <span class="arrow next" onclick="controllar(1)">&#10095;</span>
+
+    </div>
+    <!-- second styling -->
+    <h3 id="new">New Year, New Finds</h3>
+    <div id="container3">
+        <div>
+            <img height="80%" width="100%" src="chinu.jpeg" alt="">
+            <h4 id="modern">Cole Haan, Sam Edelman & More</h4>
+            <p class="text4">Give cold weather a warm welcome.</p>
+            <a class="tag1" href="">Women,s Outwear</a>
+            <a class="tag1" href="">Women,s Jeans</a>
+            <a class="tag1" href="">All Boots</a>
+        </div>
+        <div>
+            <img height="80%" width="100%" src="up.jpeg" alt="">
+            <h4 id="modern">Abound & More</h4>
+            <p class="text4">The cozy, effortless layers your weekend's been waiting for.</p>
+            <a class="tag1" href="">Women,s Loungwear</a>
+            <a class="tag1" href="">Women,s Slippers</a>
+            <a class="" href=""></a>
+        </div>
+
+    </div>
+    <h5 id="heading">Trending Now</h5>
+
+    <!-- categories -->
+    <div id="women-section">
+        <div class="round">
+            <img height="70%" width="100%" src="blanket1.jpeg" alt="">
+            <div>
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+
+            <h2 class="product-brands1">UGC</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$99.97</span>
+            <span class="actual-price">$40</span>
+
+        </div>
+
+
+        <div>
+            <img height="70%" width="100%" src="blanket2.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div class="round">
+            <img height="70%" width="100%" src="boot.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="blanket4.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="black boot.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+    </div>
+    <!-- EVENTS -->
+    <div class="Events"><img height="100%" width=100% src="love.jpeg" alt=""></div>
+
+
+    <!-- another section -->
+    <div id="women-section">
+        <div class="round">
+            <img height="70%" width="100%" src="girl shoes.jpeg" alt="">
+            <div>
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands1">UGC</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$99.97</span>
+            <span class="actual-price">$40</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="LOAFER.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div class="round">
+            <img height="70%" width="100%" src="boot.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="blanket4.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="black boot.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+    </div>
+    <!-- stock -->
+    <div id="headings">
+        <h2>Stock Up on the Classics</h2>
+    </div>
+    <div id="container6">
+        <div>
+            <img height="70%" width="100%" src="juicer.jpeg" alt="">
+            <h3 class="note">Appliances Under $100</h3>
+            <p class="nutrition">Support a healthy lifestyle with appliances from DASH, Nutribullet, Cuisinart and more.
+            </p>
+            <a id="line" href="">Kitchen Appliances</a>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="dressed.jpeg" alt="">
+            <h3 class="note">What's Hot Right Now</h3>
+            <p class="nutrition">Flowy florals to sleek and satin—all up to 65% off.</p>
+            <a id="line" href="">Best-Selling Dresses</a>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="box.jpeg" alt="">
+            <h3 class="note">Reset Your Space from $19.97</h3>
+            <p class="nutrition">Give your room a home-show worthy makeover.</p>
+            <a id="line" href="">Reset Your Space</a>
+        </div>
+    </div>
+
+    <!-- another women-section -->
+
+    </div>
+    <h5 id="heading">Best Selling</h5>
+
+    <!-- categories -->
+    <div id="women-section">
+        <div class="round">
+            <img height="70%" width="100%" src="blanket1.jpeg" alt="">
+            <div>
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands1">UGC</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$99.97</span>
+            <span class="actual-price">$40</span>
+            <button class="card-btn1">Add To wishlist</button>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="blanket2.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div class="round">
+            <img height="70%" width="100%" src="boot.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="blanket4.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="black boot.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+        </div>
+    </div>
+    <!-- EVENTS -->
+    <div class="Events"><img height="100%" width=100% src="love.jpeg" alt=""></div>
+
+
+    <!-- another section -->
+    <div>
+        <h5 id="heading"> Best-selling items</h5>
+    </div>
+    <div id="women-section">
+        <div class="round">
+            <img height="70%" width="100%" src="jeans2.jpeg" alt="">
+            <div>
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: teal;background: teal;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: skyblue;background: skyblue;border-radius: 100%;font-size: 15px"
+                    class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands1">UGC</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$99.97</span>
+            <span class="actual-price">$40</span>
+            <button id="women-order"><a href="cart.html">Add to Cart</a></button>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="jeans3.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: teal;background: teal;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: skyblue;background: skyblue;border-radius: 100%;font-size: 15px"
+                    class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+            <button id="women-order"><a href="cart.html">Add to Cart</a></button>
+        </div>
+        <div class="round">
+            <img height="70%" width="100%" src="jeans4.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: teal;background: teal;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: skyblue;background: skyblue;border-radius: 100%;font-size: 15px"
+                    class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+            <button id="women-order"><a href="cart.html">Add to Cart</a></button>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="jeans5.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: teal;background: teal;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: skyblue;background: skyblue;border-radius: 100%;font-size: 15px"
+                    class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+            <button id="women-order"><a href="cart.html">Add to Cart</a></button>
+        </div>
+        <div>
+            <img height="70%" width="100%" src="jeans6.jpeg" alt="">
+            <div class="round">
+                <i style="color: black;background:black;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: grey;background: grey;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: brown;background: brown;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: teal;background: teal;border-radius: 100%;font-size: 15px" class="far fa-circle"></i>
+                <i style="color: skyblue;background: skyblue;border-radius: 100%;font-size: 15px"
+                    class="far fa-circle"></i>
+            </div>
+            <h2 class="product-brands">Limited-Time Sale</h2>
+            <p class="product-short-description">BAREFOOT DREAMS</p>
+            <span class="price">$44.97</span>
+            <span class="actual-price">$90.00</span>
+            <button id="women-order"><a href="cart.html">Add to Cart</a></button>
+        </div>
+    </div>
+
+    </section>
+    <div id="more">
+        <h2>More to Know</h2>
+    </div>
+    <div id="container7">
+        <div>
+            <img height="50%" width="104%" src="nordy.jpeg" alt="">
+            <h1 class="playstore">The Nordy Club</h1>
+            <p class="stored">Rewards look good on you! Join for free and unlock benefits you'll love.</p>
+            <a id="rack" href="">Learn More</a>
+        </div>
+        <div>
+            <img height="50%" width="104%" src="app.jpeg" alt="">
+            <h3 class="playstore">Get $5 Off in Our App </h3>
+            <p class="stored">On $50 or more. Valid for first-time download only.</p>
+            <a class="rack1" href="">App Store Google Play</a>
+        </div>
+        <div>
+            <img height="50%" width="104%" src="sign.jpeg" alt="">
+            <h3 class="playstore">Extended Holiday Returns
+            </h3>
+            <p class="stored">Eligible purchases made between 10/18 and 12/24 can be returned until 2/7!</p>
+            <a id="rack" href="">Learn More</a>
+        </div>
+        <div>
+            <img height="50%" width="104%" src="notepoint.jpeg" alt="">
+            <h3 class="playstore">An Exclusive Offer</h3>
+            <p class="stored">Just for new Nordstrom credit cardmembers. Restrictions apply. </p>
+            <a id="rack" href="">Apply Now</a>
+        </div>
+    </div>
+
+    <!-- section -->
+    <div class="best">
+        <h3>Shop #nordstromrack</h3>
+        <p>Click your favorite photos to shop fan finds. Add the hashtag to your post for a chance to be featured!</p>
+    </div>
+
+    <!-- section  -->
+    <div id="container8">
+        <div>
+            <img height="100%" width="100%" src="women1.jpeg" alt="">
+        </div>
+        <div>
+            <img height="100%" width="100%" src="women2.jpeg" alt="">
+        </div>
+        <div>
+            <img height="100%" width="100%" src="women3.jpeg" alt="">
+        </div>
+        <div>
+            <img height="100%" width="100%" src="women4.jpeg" alt="">
+        </div>
+        <div>
+            <img height="100%" width="100%" src="women5.jpeg" alt="">
+        </div>
+    </div>
+    <div class="view">
+        <h2>Recently viewed</h2>
+    </div>
+    <!-- section2 -->
+    <div id="container9">
+        <div>
+            <img height="60%" width="100%" src="UGG.jpeg" alt="">
+            <h3 class="brand">UGG</h3>
+
+
+        </div>
+
+        <div>
+            <img height="60%" width="100%" src="nike1.jpeg" alt="">
+            <h3 class="brand">NIKE</h3>
+        </div>
+        <div>
+            <img height="60%" width="100%" src="loafer1.jpeg" alt="">
+            <h3 class="brand">MarkDown</h3>
+        </div>
+    </div>
+    <div>
+        <img height="100%" width="100%" src="rock.jpeg" alt="">
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="container10">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Custom Service</h4>
+                    <ul>
+                        <li><a href="">Order Status</a></li>
+                        <li><a href="">Guest Returns</a></li>
+                        <li><a href="">Shipping & Return policy</a></li>
+                        <li><a href="">gift cards</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="">About Our Brand</a></li>
+                        <li><a href="">The Nordy Club</a></li>
+                        <li><a href="">Store Locator</a></li>
+                        <li><a href="">All Brands</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Get Email Updates</a></li>
+                        <li><a href="">Nordstorm Blog</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nordstrom Rack & The Community</h4>
+                    <ul>
+                        <li><a href="">Corporate Social Responsibility</a></li>
+                        <li><a href="">Diversity,Inclusion & Belonging</a></li>
+                        <li><a href="">Big Brothers Big Sisters</a></li>
+                        <li><a href="">Donates Clothes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nordstrom Card</h4>
+                    <ul>
+                        <li><a href="">Apply For a Nordstorm Card</a></li>
+                        <li><a href="">Pay My Bill</a></li>
+                        <li><a href="">Manage My Nordstorm Card</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nordstrom, Inc.</h4>
+                    <ul>
+                        <li><a href="">Nordstrom</a></li>
+                        <li><a href="">Nordstorm Canada</a></li>
+                        <li><a href="">Trunk Club</a></li>
+                        <li><a href="">HauteLook</a></li>
+                        <li><a href="">Investor Relations</a></li>
+                        <li><a href="">Press Release</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Download Our Apps</h4>
+                    <div class="socail-links">
+                        <a href=""><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="container11">
+            <ul>
+                <li><a href="">Your Privacy Rights</a></li>
+                <li><a href="">Do Not Sell My Info</a></li>
+                <li><a href="">Terms & Conditions</a></li>
+                <li><a href="">Internet Based Ads</a></li>
+                <li><a href="">California Supply Chain Act</a></li>
+                <li><a href="">©2022 Nordstrom Rack</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    let flag = 0;
+    function controllar(x) {
+        flag = flag + x;
+        slideshow(flag);
+
+    }
+    slideshow(flag);
+
+    function slideshow(num) {
+        let slides = document.getElementsByClassName('slide');
+        if (num == slides.length) {
+            flag = 0;
+            num = 0;
+        }
+        if (num < 0) {
+            flag = slides.length - 1;
+            num = slides.length - 1;
+        }
+        for (let y of slides) {
+            y.style.display = "none";
+        }
+        slides[num].style.display = "block";
+
+
+
+    }
+    function signIn() {
+        if (click = true) {
+            window.location.href = "signup.html";
+        }
+    }
+</script>
